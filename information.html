@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="information.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img\Logo.png" alt="Логотип"></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="company.html">Компания</a></li>
+            <li class="dropdown">
+              <a href="services.html">Услуги</a>
+            </li>
+            <li><a href="single window.html">Единое окно</a></li>
+            <li class="dropdown">
+              <a href="Payment.html">Оплата</a>
+            </li>
+            <li><a href="#" style="color: blue;">Информация</a></li>
+            <li><a href="online store.html">Интернет магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <button class="search-btn" onclick="openSearch()">
+            <img src="img\Search.png" alt="Иконка поиска">
+          </button>
+        </div>
+      </header>
+    
+      <div id="search-overlay" class="search-overlay">
+        <button class="close-btn" onclick="closeSearch()">×</button>
+        <form class="search-form">
+          <input type="text" placeholder="Введите запрос..." autofocus>
+          <button type="submit">Поиск</button>
+        </form>
+      </div>
+
+      <ul class="breadcrumb">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#">Информация</a></li>
+        <li>Новости</li>
+      </ul>
+
+      <div class="zagolovok_block_company">
+        <h1>Новости</h1>
+      </div>
+
+
+
+
+
+      <div class="news-section">
+        <div class="sort-controls">
+          <button class="sort-btn" onclick="filterNewsByYear('all')">За все время</button>
+          <button class="sort-btn" onclick="filterNewsByYear('2024')">2024</button>
+          <button class="sort-btn" onclick="filterNewsByYear('2023')">2023</button>
+          <button class="sort-btn" onclick="filterNewsByYear('2022')">2022</button>
+          <button class="sort-btn" onclick="filterNewsByYear('2021')">2021</button>
+          <button class="sort-btn" onclick="filterNewsByYear('2020')">2020</button>
+          <button class="sort-btn" onclick="filterNewsByYear('2019')">2019</button>
+        </div>
+        <div class="news-container">
+          <div class="news-item" data-year="2024">
+            <img src="img\image (21).png" alt="Новость 2024">
+            <a href="1 info.html"><h3>Генеральный директор «Газпром 
+              газораспределение Пермь» проинспектировал 
+              строительство межпоселкового газопровода 
+              на север региона</h3></a>
+            <span class="news-date">29 ноября 2024</span>
+          </div>
+          <div class="news-item" data-year="2024">
+            <img src="img\image (22).png" alt="Новость 2023">
+            <a href="2 info.html"><h3>В селе Гамово Пермского края газифицирован 
+              храм XIX века</h3></a>
+            <span class="news-date">29 марта 2024</span>
+          </div>
+          <div class="news-item" data-year="2024">
+            <img src="img\image (23).png" alt="Новость 2022">
+            <h3>Газовое хозяйство Пермского края готово к 
+                работе в отопительный сезон</h3>
+            <span class="news-date">15 августа 2024</span>
+          </div>
+          <div class="news-item" data-year="2023">
+            <img src="img\image (24).png" alt="Новость 2023">
+            <h3>«Газпром газораспределение Пермь» вошел 
+                в Федеральный Реестр «Всероссийская Книга 
+                Почета»</h3>
+            <span class="news-date">20 октября 2023</span>
+          </div>
+          <div class="news-item" data-year="2023">
+            <img src="img\image (25).png" alt="Новость 2023">
+            <h3>Специалисты «Газпром газораспределение Пермь» 
+                подвели итоги пилотного проекта по замене 
+                газового оборудования, не отвечающего 
+                требованиям безопасности</h3>
+            <span class="news-date">20 октября 2023</span>
+          </div>
+          <div class="news-item" data-year="2023">
+            <img src="img\image (26).png" alt="Новость 2023">
+            <a href="3 info.html"><h3>В Перми введен в эксплуатацию газопровод для 
+              догазификации микрорайона 
+              Куйбышевский поселок</h3></a>
+            <span class="news-date">20 октября 2023</span>
+          </div>
+          <div class="news-item" data-year="2022">
+            <img src="img\image (27).png" alt="Новость 2023">
+            <h3>В Кудымкарском районе Пермского края построен 
+                межпоселковый газопровод</h3>
+            <span class="news-date">20 октября 2022</span>
+          </div>
+          <div class="news-item" data-year="2022">
+            <img src="img\image (28).png" alt="Новость 2023">
+            <h3>Пермские газовики награждены 
+                благодарственными письмами губернатора</h3>
+            <span class="news-date">20 октября 2022</span>
+          </div>
+          <div class="news-item" data-year="2022">
+            <img src="img\image (29).png" alt="Новость 2023">
+            <h3>В Пермском крае подвели итоги газификации и 
+                догазификации за 2022 год</h3>
+            <span class="news-date">20 октября 2022</span>
+          </div>
+          <div class="news-item" data-year="2021">
+            <img src="img\image (30).png" alt="Новость 2023">
+            <h3>В Прикамье среди сотрудников газовых компаний 
+                прошёл ежегодный турнир по волейболу
+                </h3>
+            <span class="news-date">20 октября 2021</span>
+          </div>
+          <div class="news-item" data-year="2021">
+            <img src="img\image (31).png" alt="Новость 2023">
+            <h3>Газовики Прикамья в период нерабочих дней 
+                продолжат свою деятельность</h3>
+            <span class="news-date">20 октября 2021</span>
+          </div>
+          <div class="news-item" data-year="2021">
+            <img src="img\image (32).png" alt="Новость 2023">
+            <h3>В Прикамье ввели в эксплуатацию две новые 
+                базы газового хозяйства</h3>
+            <span class="news-date">20 октября 2021</span>
+          </div>
+          <div class="news-item" data-year="2020">
+            <img src="img\image (33).png" alt="Новость 2023">
+            <h3>В один из самых северных районов Пермского 
+                края пришёл газ</h3>
+            <span class="news-date">20 октября 2020</span>
+          </div>
+          <div class="news-item" data-year="2020">
+            <img src="img\image (34).png" alt="Новость 2023">
+            <h3>В Пермском крае возможность подключить свои 
+                дома к газу появилась у жителей посёлка Ласьва</h3>
+            <span class="news-date">20 октября 2020</span>
+          </div>
+          <div class="news-item" data-year="2020">
+            <img src="img\image (35).png" alt="Новость 2023">
+            <h3>Жители трёх деревень в Кунгурском районе 
+                Пермского края получили возможность подключить 
+                свои дома к газу
+                </h3>
+            <span class="news-date">20 октября 2020</span>
+          </div>
+          <div class="news-item" data-year="2019">
+            <img src="img\image (36).png" alt="Новость 2023">
+            <h3>«Газпром газораспределение Пермь» переходит 
+                на новый формат уведомлений о предстоящем 
+                техобслуживании газового оборудования</h3>
+            <span class="news-date">20 октября 2019</span>
+          </div>
+          <div class="news-item" data-year="2019">
+            <img src="img\image (37).png" alt="Новость 2023">
+            <h3>«Газпром газораспределение Пермь» по 
+                соглашению с ФАС направит дополнительные 
+                средства на газификацию Пермского края</h3>
+            <span class="news-date">20 октября 2019</span>
+          </div>
+          <div class="news-item" data-year="2019">
+            <img src="img\image (38).png" alt="Новость 2023">
+            <h3>Лучшая аварийная бригада компании – в 
+                Пермском филиале</h3>
+            <span class="news-date">20 октября 2019</span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <footer class="footer">
+        <div class="newsletter">
+          <h3>Подпишитесь на наши новости</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Введите ваш email" required>
+            <button type="submit">Подписаться</button>
+          </form>
+        </div>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Компания</h3>
+            <br>
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">История</a></li>
+              <li><a href="#">Лицензия и свидетельства</a></li>
+              <li><a href="#">Филиалы</a></li>
+              <li><a href="#">Вакансии</a></li>
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">Оставить сообщение</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Каталог</h3>
+            <br>
+            <ul>
+              <li><a href="#">Счетчики газа</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Услуги</h3>
+            <br>
+            <ul>
+              <li><a href="#">Подключение к сетям<br>газоснабжения</a></li>
+              <li><a href="#">Заключение договора<br>поставки газа</a></li>
+              <li><a href="#">Техническое обслуживание<br>газового<br>оборудования</a></li>
+              <li><a href="#">аварийно-диспетчерское<br>обслуживание</a></li>
+              <li><a href="#">Ремонт газового<br>оборудования</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Информация</h3>
+            <br>
+            <ul>
+              <li><a href="#">Раскрытие информации</a></li>
+              <li><a href="#">Закупки</a></li>
+              <li><a href="#">Акционерам</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Наши Контакты</h3>
+            <br>
+            <ul class="social-links">
+              <p>Единный call-центр по<br> 
+                приему ремонтных заявок:</p>
+                <br>
+              <li><a href="#">8-800-3000-104</a></li><br>
+              <li><a href="#">(342) 270-10-04</a></li>
+              <br><br>
+              <p>Приемная:</p>
+              <br>
+              <li><a href="#">+7 (342) 218-11-00</a></li>
+              <br><br>
+              <p><img src="img\Location.png" alt="">614000,г.Пермь. Ул.<br>
+                Уральская, 104</p><br>
+              <p class="linksugaz"><img src="img\Gmail Logo.png" alt=""><a href="e-mail">ugaz@ugaz.ru</a></p>
+
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Газпром. Все права защищены.</p>
+        </div>
+      </footer>
+
+
+      <script src="main.js"></script>
+      
+      
+
+</body>
+</html>

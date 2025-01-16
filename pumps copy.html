@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет магазин</title>
+    <link rel="stylesheet" href="online store.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img\Logo.png" alt="Логотип"></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="company.html">Компания</a></li>
+            <li class="dropdown">
+              <a href="services.html">Услуги</a>
+              <div class="dropdown-menu"></div>
+            </li>
+            <li><a href="#">Единое окно</a></li>
+            <li class="dropdown">
+              <a href="Payment.html">Оплата</a>
+              <div class="dropdown-menu"></div>
+            </li>
+            <li><a href="information.html">Информация</a></li>
+            <li><a href="online store.html" style="color: blue;">Интернет магазин</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <button class="search-btn" onclick="openSearch()">
+            <img src="img\Search.png" alt="Иконка поиска">
+          </button>
+        </div>
+    </header>
+
+    <div id="search-overlay" class="search-overlay">
+        <button class="close-btn" onclick="closeSearch()">×</button>
+        <form class="search-form">
+          <input type="text" placeholder="Введите запрос..." autofocus>
+          <button type="submit">Поиск</button>
+        </form>
+    </div>
+
+    <ul class="breadcrumb">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="online store.html">Категория</a></li>
+        <li>Товары</li>
+    </ul>
+
+    <div class="zagolovok_block_company">
+        <h1>Интернет-магазин</h1>
+    </div>
+
+    <div class="header-bar">
+        <a href="#about" class="shop-link">О Интернет-магазине</a>
+        <div class="cart">
+          <a href="basket.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/711/711897.png" alt="Корзина" class="cart-icon">
+           (<span id="cart-count">0</span>)
+          </a>
+        </div>
+    </div>
+    <hr class="divider" style="width: 95%; margin-left: 4%;">
+
+
+    <div class="products-container_1">
+      <div class="product-item_1" data-id="1">
+          <img src="img\aebb30c4_5939_11e6_97b1_0026552fcde8_b8c34892_9011_11ee_8db1_04421acac403.jpg" alt="Товар 1">
+          <div class="product-details_1">
+              <div class="product-title_1">Котел газовый двухконтурный Baxi ECO 4S 24 (24 кВт), 220В</div>
+              <div class="product-price_1">120000 ₽</div>
+              <button class="add-to-cart-btn_1">В корзину</button>
+          </div>
+      </div>
+      <div class="product-item_1" data-id="2">
+          <img src="img\09d4d70a_585d_11e5_8b8f_0026552fcde2_1f155412_8f71_11ef_8db9_04421acac403.jpg" alt="Товар 2">
+          <div class="product-details_1">
+              <div class="product-title_1">Котел газовый Baxi Slim 1.490 iN (49 кВт), без вытяжного зонта</div>
+              <div class="product-price_1">90000 ₽</div>
+              <button class="add-to-cart-btn_1">В корзину</button>
+          </div>
+      </div>
+      <div class="product-item_1" data-id="3">
+          <img src="img\6a86f8b4_c3c5_11e0_afa5_00155d006202_0079f2f7_5d15_11ee_8db1_04421acac403.jpg" alt="Товар 3">
+          <div class="product-details_1">
+              <div class="product-title_1">Котел газовый двухконтурный Baxi ECO Four 24 F (24 кВт), 220В</div>
+              <div class="product-price_1">150000 ₽</div>
+              <button class="add-to-cart-btn_1">В корзину</button>
+          </div>
+      </div>
+  </div>
+  
+
+    <script src="main.js"></script>
+    <script>
+      // Скрипт для добавления товаров в корзину
+      document.addEventListener('DOMContentLoaded', () => {
+          const cartCountElement = document.getElementById('cart-count');
+          const addToCartButtons = document.querySelectorAll('.add-to-cart-btn_1');
+
+          // Обновление счетчика корзины
+          function updateCartCount() {
+              const cart = JSON.parse(localStorage.getItem('cart')) || [];
+              const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+              cartCountElement.textContent = totalItems;
+          }
+
+          // Добавление товара в корзину
+          function addToCart(product) {
+              let cart = JSON.parse(localStorage.getItem('cart')) || [];
+              const existingItem = cart.find(item => item.id === product.id);
+
+              if (existingItem) {
+                  existingItem.quantity += 1;
+              } else {
+                  cart.push(product);
+              }
+
+              localStorage.setItem('cart', JSON.stringify(cart));
+              updateCartCount();
+          }
+
+          // Обработчик кликов на кнопках "В корзину"
+          addToCartButtons.forEach(button => {
+              button.addEventListener('click', () => {
+                  const productElement = button.closest('.product-item_1');
+                  const id = productElement.getAttribute('data-id');
+                  const title = productElement.querySelector('.product-title_1').textContent;
+                  const price = productElement.querySelector('.product-price_1').textContent;
+                  const image = productElement.querySelector('img').src;
+
+                  const product = {
+                      id,
+                      title,
+                      price,
+                      image,
+                      quantity: 1,
+                  };
+
+                  addToCart(product);
+                  alert(`${title} добавлен в корзину!`);
+              });
+          });
+
+          // Инициализация
+          updateCartCount();
+      });
+    </script>
+</body>
+</html>
+

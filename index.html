@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="img\Logo.png" alt="Логотип">
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="company.html">Компания</a></li>
+        <li class="dropdown">
+          <a href="services.html">Услуги</a>
+        </li>
+        <li><a href="single window.html">Единое окно</a></li>
+        <li class="dropdown">
+          <a href="Payment.html">Оплата</a>
+        </li>
+        <li><a href="information.html">Информация</a></li>
+        <li><a href="online store.html">Интернет магазин</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="search">
+      <button class="search-btn" onclick="openSearch()">
+        <img src="img\Search.png" alt="Иконка поиска">
+      </button>
+    </div>
+  </header>
+  <div id="search-overlay" class="search-overlay">
+    <button class="close-btn" onclick="closeSearch()">×</button>
+    <form class="search-form" onsubmit="handleSearch(event)">
+      <input id="searchInput" type="text" placeholder="Введите запрос..." autofocus>
+      <button type="submit">Поиск</button>
+    </form>
+    <div id="searchResults" class="search-results"></div>
+  </div>
+  
+
+
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <img src="img\внутридомовое.jpg" alt="Картинка 1">
+        <div class="slide-text">
+          <a href=""><h2>Техническое обслуживание<br>газового оборудования</h2></a>
+          <p>Обладаем статусом специализированной организации по обслуживанию<br>внутридомового и внутриквартирного газового оборудования. </p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img\lg!4kc.jpeg" alt="Картинка 2">
+        <div class="slide-text">
+          <a href="#"><h2>Газовое оборудование для<br>догазификации</h2></a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img\photo_2022-11-16-13.25.50.jpeg__0_0x0.jpg" alt="Картинка 3">
+        <div class="slide-text">
+          <a href=""><h2>Выполняем весь спектр услуг<br>по газификации</h2></a>
+          <p>Газификация региона - одно из наиболее приоритетных и социально<br>значимых направлений работы общества. Программы газификации<br>региона осуществляются совместно с правительством Пермского края. </p>
+        </div>
+      </div>
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+  
+  <div class="services_block_index_main">
+    <div class="services_text">
+      <a href="services.html"><h2>Наши услуги</h2></a>
+      <hr>
+      <div class="company-description">
+        <p>Компания специализируется на<br>
+          оказании широкого спектра услуг<br>
+          как для корпоративных клиентов,<br>
+          так и для частных лиц.</p>
+      </div>
+      <div class="company-advantages">
+       <p> Профессионализм и ответственность —<br> 
+        ключевые преимущества нашей 
+        компании.
+        </p>
+      </div>
+      <a  href="services.html"><button class="details-button">Подробнее...</button></a>
+    </div>
+  
+    <div class="flip-cards-container">
+      <div class="flip-container">
+        <div class="flip-card">
+          <div class="flip-card-front">
+            <img src="img\5197682573541765165.jpg" alt="Картинка 1">
+          </div>
+          <div class="flip-card-back">
+            <a href="#">Подключение к сетям<br>газоснабжения</a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-container">
+        <div class="flip-card">
+          <div class="flip-card-front">
+            <img src="img\5197682573541765173.jpg" alt="Картинка 2">
+          </div>
+          <div class="flip-card-back">
+            <a href="page2.html">Техническое обслуживание<br>газового оборудования</a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-container">
+        <div class="flip-card">
+          <div class="flip-card-front">
+            <img src="img\5197682573541765184.jpg" alt="Картинка 3">
+          </div>
+          <div class="flip-card-back">
+            <a href="page3.html">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-container">
+        <div class="flip-card">
+          <div class="flip-card-front">
+            <img src="img\5197682573541765234.jpg" alt="Картинка 4">
+          </div>
+          <div class="flip-card-back">
+            <a href="page4.html">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-container">
+        <div class="flip-card">
+          <div class="flip-card-front">
+            <img src="img\510b96200a38386668f1e3ce00dac782.jpg" alt="Картинка 5">
+          </div>
+          <div class="flip-card-back">
+            <a href="page5.html">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="news-header">
+    <h2>Новости</h2>
+    <a href="information.html" class="all-news-link">Все новости</a>
+  </div>
+
+  <div class="news-container">
+    <div class="news-item" data-year="2024">
+      <img src="img\image (21).png" alt="Новость 2024">
+      <h3>Генеральный директор «Газпром 
+          газораспределение Пермь» проинспектировал 
+          строительство межпоселкового газопровода 
+          на север региона</h3>
+      <span class="news-date">29 ноября 2024</span>
+    </div>
+    <div class="news-item" data-year="2024">
+      <img src="img\image (22).png" alt="Новость 2023">
+      <h3>В селе Гамово Пермского края газифицирован 
+          храм XIX века</h3>
+      <span class="news-date">29 марта 2024</span>
+    </div>
+    <div class="news-item" data-year="2024">
+      <img src="img\image (23).png" alt="Новость 2022">
+      <h3>Газовое хозяйство Пермского края готово к 
+          работе в отопительный сезон</h3>
+      <span class="news-date">15 августа 2024</span>
+    </div>
+    <div class="news-item" data-year="2019">
+      <img src="img\image (37).png" alt="Новость 2023">
+      <h3>«Газпром газораспределение Пермь» по 
+          соглашению с ФАС направит дополнительные 
+          средства на газификацию Пермского края</h3>
+      <span class="news-date">20 октября 2019</span>
+    </div>
+
+  </div>
+</div>
+
+<hr style="margin-top: 2%;">
+<div class="about-company">
+  <h2>О компании</h2>
+  <p>
+    <strong>АО «Газпром газораспределение Пермь»</strong> – одна из крупнейших газораспределительных организаций России.
+  </p>
+  <p>
+    Газовое хозяйство Пермского края сегодня – это:
+  </p>
+  <ul>
+    <li>6 филиалов (Березниковский, Краснокамский, Пермский, Пермский районный, Чайковский, Чусовской);</li>
+    <li>1 дочернее предприятие (АО «Пермгазтехнология»);</li>
+    <li>13 778,94 км газопроводов, эксплуатируемых Обществом;</li>
+    <li>551 газифицированный промышленный объект;</li>
+    <li>5 525 газифицированных коммунально-бытовых объектов;</li>
+    <li>777 027 газифицированных квартир;</li>
+    <li>701 газорегуляторный пункт, установка (ГРП, ГРПБ, ГРУ);</li>
+    <li>4 048 шкафных газорегуляторных пунктов.</li>
+  </ul>
+</div>
+
+<div class="image-text-row">
+  <div class="image-text-item">
+    <img src="img/Combo Chart.png" alt="Описание 1">
+    <div class="text-content">
+      <h2 class="animate-number" data-value="5">5</h2>
+      <p>млрд.м³. объем<br> транспортировки газа</p>
+    </div>
+  </div>
+  <div class="image-text-item">
+    <img src="img/People.png" alt="Описание 2">
+    <div class="text-content">
+      <h2 class="animate-number" data-value="3041">3041</h2>
+      <p>сотрудников</p>
+    </div>
+  </div>
+  <div class="image-text-item">
+    <img src="img/Infinity.png" alt="Описание 3">
+    <div class="text-content">
+      <h2 class="animate-number" data-value="66">66</h2>
+      <p>лет работы на рынке</p>
+    </div>
+  </div>
+  <div class="image-text-item">
+    <img src="img/Business.png" alt="Описание 4">
+    <div class="text-content">
+      <h2 class="animate-number" data-value="7500">7500</h2>
+      <p>в год газифицированных<br> объектов</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="image-grid">
+  <a href="https://xn--b1acfqtcfb0fxbq.xn--p1acf/" class="image-item">
+    <img src="img/image (131).png" alt="Image 1">
+  </a>
+  <a href="https://pos.gosuslugi.ru/lkp/polls/419347/" class="image-item">
+    <img src="img/image (132).png" alt="Image 2">
+  </a>
+  <a href="https://xn--80aabjimdn9ailz5k.xn--p1ai/" class="image-item">
+    <img src="img/image (133).png" alt="Image 3">
+  </a>
+  <a href="https://www.kp.ru/putevoditel/spetsproekty/gazart-2023/?utm_source=partner" class="image-item">
+    <img src="img/image (134).png" alt="Image 4">
+  </a>
+  <a href="https://www.ugaz.ru/ks/kalkulyator/" class="image-item">
+    <img src="img/image (135).png" alt="Image 5">
+  </a>
+  <a href="https://receptiondzo.mrgeng.ru/?id=105" class="image-item">
+    <img src="img/image (136).png" alt="Image 6">
+  </a>
+</div>
+
+<div class="right-content">
+  <a href="https://connectgas.ru/" class="vertical-image-item">
+    <img src="img/image (137).png" alt="Right Image 1">
+  </a>
+  <a href="https://www.gazprommap.ru/permsky/" class="vertical-image-item">
+    <img src="img/image (138).png" alt="Right Image 2">
+  </a>
+  <a href="https://receptiondzo.mrgeng.ru/?id=105" class="vertical-image-item">
+    <img src="img/image (139).png" alt="Right Image 3">
+  </a>
+</div>
+
+<hr class="one" style="margin-top: -42%;">
+
+<div class="branches-header">
+  <h2>Наши филиалы</h2>
+</div>
+
+
+<div class="branches-grid">
+  <!-- Первый ряд -->
+  <div class="branch-item">
+    <img src="img\image (140).png" alt="Филиал 1">
+    <p class="branch-name">Филиал</p>
+    <p class="branch-city">Филиал в г. Березники</p>
+  </div>
+  <div class="branch-item">
+    <img src="img\image (141).png" alt="Филиал 2">
+    <p class="branch-name">Филиал</p>
+    <p class="branch-city">Филиал в г. Краснокамск</p>
+  </div>
+  <div class="branch-item">
+    <img src="img\image (142).png" alt="Филиал 3">
+    <p class="branch-name">Филиал</p>
+    <p class="branch-city">Филиал в г. Пермь</p>
+  </div>
+
+  <!-- Второй ряд -->
+  <div class="branch-item">
+    <img src="img\image (143).png" alt="Филиал 4">
+    <p class="branch-name">Филиал</p>
+    <p class="branch-city">Филиал в г. Чайковский</p>
+  </div>
+  <div class="branch-item">
+    <img src="img\image (144).png" alt="Филиал 5">
+    <p class="branch-name">Филиал</p>
+    <p class="branch-city">Филиал в г. Чусовой</p>
+  </div>
+  <div class="branch-item">
+    <img src="img\image (145).png" alt="Филиал 6">
+    <p class="branch-name">Филиал</p>
+    <p class="branch-city">Филиал в Пермском районе</p>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="newsletter">
+    <h3>Подпишитесь на наши новости</h3>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Введите ваш email" required>
+      <button type="submit">Подписаться</button>
+    </form>
+  </div>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Компания</h3>
+      <br>
+      <ul>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">История</a></li>
+        <li><a href="#">Лицензия и свидетельства</a></li>
+        <li><a href="#">Филиалы</a></li>
+        <li><a href="#">Вакансии</a></li>
+        <li><a href="#">Реквизиты</a></li>
+        <li><a href="#">Оставить сообщение</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Каталог</h3>
+      <br>
+      <ul>
+        <li><a href="#">Счетчики газа</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Услуги</h3>
+      <br>
+      <ul>
+        <li><a href="#">Подключение к сетям<br>газоснабжения</a></li>
+        <li><a href="#">Заключение договора<br>поставки газа</a></li>
+        <li><a href="#">Техническое обслуживание<br>газового<br>оборудования</a></li>
+        <li><a href="#">аварийно-диспетчерское<br>обслуживание</a></li>
+        <li><a href="#">Ремонт газового<br>оборудования</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Информация</h3>
+      <br>
+      <ul>
+        <li><a href="#">Раскрытие информации</a></li>
+        <li><a href="#">Закупки</a></li>
+        <li><a href="#">Акционерам</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Наши Контакты</h3>
+      <br>
+      <ul class="social-links">
+        <p>Единный call-центр по<br> 
+          приему ремонтных заявок:</p>
+          <br>
+        <li><a href="#">8-800-3000-104</a></li><br>
+        <li><a href="#">(342) 270-10-04</a></li>
+        <br><br>
+        <p>Приемная:</p>
+        <br>
+        <li><a href="#">+7 (342) 218-11-00</a></li>
+        <br><br>
+        <p><img src="img\Location.png" alt="">614000,г.Пермь. Ул.<br>
+          Уральская, 104</p><br>
+        <p class="linksugaz"><img src="img\Gmail Logo.png" alt=""><a href="e-mail">ugaz@ugaz.ru</a></p>
+
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Газпром. Все права защищены.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+  
+  
+
+  <script src="main.js">
+    
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="online store.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img\Logo.png" alt="Логотип"></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="company.html">Компания</a></li>
+            <li class="dropdown">
+              <a href="services.html">Услуги</a>
+             
+            </li>
+            <li><a href="#">Единое окно</a></li>
+            <li class="dropdown">
+              <a href="Payment.html">Оплата</a>
+              
+            </li>
+            <li><a href="information.html">Информация</a></li>
+            <li><a href="online store.html" style="color: blue;">Интернет магазин</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <button class="search-btn" onclick="openSearch()">
+            <img src="img\Search.png" alt="Иконка поиска">
+          </button>
+        </div>
+      </header>
+    
+      <div id="search-overlay" class="search-overlay">
+        <button class="close-btn" onclick="closeSearch()">×</button>
+        <form class="search-form">
+          <input type="text" placeholder="Введите запрос..." autofocus>
+          <button type="submit">Поиск</button>
+        </form>
+      </div>
+
+      <ul class="breadcrumb">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="online store.html">Интернет-магазин</a></li>
+        <li><a href="pumps.html">Товары</a></li>
+        <li>Корзина</li>
+      </ul>
+
+      <div class="zagolovok_block_company">
+        <h1>Корзина</h1>
+      </div>
+
+      <div class="header-bar">
+        <a href="#about" class="shop-link">О Интернет-магазине</a>
+        <div class="cart">
+          <button class="cart-btn" onclick="addToCart()">
+            <img src="https://cdn-icons-png.flaticon.com/512/711/711897.png" alt="Корзина" class="cart-icon">
+           (<span id="cart-count">0</span>)
+          </button>
+        </div>
+      </div>
+      <hr class="divider" style="width: 95%; margin-left: 4%;">
+
+
+      <div class="cart-items" id="cart-items">
+        <!-- Товары добавятся сюда через JavaScript -->
+      </div>
+
+      <!-- Новые элементы -->
+      <div class="cart-summary">
+        <h2>Итого: <span id="total-price">0 ₽</span></h2>
+        <button id="checkout-btn" class="checkout-btn">Оформить заказ</button>
+      </div>
+
+      <script>
+        // Загружаем корзину из localStorage
+        const cartItemsContainer = document.getElementById('cart-items');
+        const totalPriceElement = document.getElementById('total-price');
+        const checkoutButton = document.getElementById('checkout-btn');
+
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItemsContainer.innerHTML = '';
+            let totalPrice = 0;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Ваша корзина пуста. Добавьте товары!</p>';
+            } else {
+                cart.forEach(item => {
+                    const itemElement = document.createElement('div');
+                    itemElement.classList.add('cart-item');
+                    itemElement.innerHTML = `
+                        <img src="${item.image}" alt="${item.title}" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <h3>${item.title}</h3>
+                            <p>${item.price}</p>
+                            <p>Количество: ${item.quantity}</p>
+                            <button class="remove-item-btn" data-id="${item.id}">Удалить</button>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(itemElement);
+
+                    const itemPrice = parseInt(item.price.replace('₽', '').trim(), 10);
+                    totalPrice += itemPrice * item.quantity;
+                });
+
+                const removeButtons = document.querySelectorAll('.remove-item-btn');
+                removeButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const itemId = button.dataset.id;
+                        removeItemFromCart(itemId);
+                    });
+                });
+            }
+
+            totalPriceElement.textContent = `${totalPrice} ₽`;
+        }
+
+        function removeItemFromCart(itemId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.id !== itemId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        checkoutButton.addEventListener('click', () => {
+            alert('Спасибо за покупку! Ваш заказ оформлен.');
+            localStorage.removeItem('cart');
+            loadCart();
+        });
+
+        loadCart();
+      </script>
+</body>
+</html>

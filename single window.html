@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="single window.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img\Logo.png" alt="Логотип"></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="company.html">Компания</a></li>
+            <li class="dropdown">
+              <a href="services.html">Услуги</a>
+              <div class="dropdown-menu">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+              </div>
+            </li>
+            <li><a href="#" style="color: blue;">Единое окно</a></li>
+            <li class="dropdown">
+              <a href="Payment.html">Оплата</a>
+              <div class="dropdown-menu">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+              </div>
+            </li>
+            <li><a href="information.html">Информация</a></li>
+            <li><a href="online store.html">Интернет магазин</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <button class="search-btn" onclick="openSearch()">
+            <img src="img\Search.png" alt="Иконка поиска">
+          </button>
+        </div>
+      </header>
+    
+      <div id="search-overlay" class="search-overlay">
+        <button class="close-btn" onclick="closeSearch()">×</button>
+        <form class="search-form">
+          <input type="text" placeholder="Введите запрос..." autofocus>
+          <button type="submit">Поиск</button>
+        </form>
+      </div>
+
+      <ul class="breadcrumb">
+        <li><a href="index.html">Главная</a></li>
+        <li>Единое окно</li>
+      </ul>
+
+      <div class="zagolovok_block_company">
+        <h1>Единое окно</h1>
+      </div>
+
+      <div class="single_win_text">
+        <p><u><b>Единое окно</b></u>– это принцип организации взаимодействия с клиентами, который позволяет получить в одном месте весь спектр 
+            предоставляемых товаров,<br> выполняемых работ и оказываемых услуг в процессе подключения и использования газа.</p>
+        <p>Реализация принципа «Единое окно» обеспечивает качественный и клиентоориентированный сервис при предоставлении 
+            товаров, работ и услуг. </p>
+
+        <h3>Минимальный перечень работ (услуг) АО «Газпром газораспределение Пермь», выполняемых (оказываемых) по принципу 
+            «Единое окно».</h3>
+            <ol>
+                <li>Выполнение расчета планируемого максимального часового расхода газа.</li>
+                <li>Предоставление ТУ в соответствии со статьей 48 Градостроительного кодекса Российской Федерации и Правилами подключения.</li>
+                <li>Заключение Договора о ТП.</li>
+                <li>Заключение Договора на ТО и Р ВДГО и (или) ВКГО, объектов системы газоснабжения.</li>
+                <li>Заключение Договора поставки газа.</li>
+                <li>Производство изыскательских работ, разработка проектно-сметной документации, разработка схем газоснабжения.</li>
+                <li>Осуществление авторского надзора.</li>
+                <li>Выполнение строительно-монтажных работ.</li>
+                <li>Осуществление строительного надзора.</li>
+                <li>Выполнение пусконаладочных работ.</li>
+                <li>Выполнение мероприятий по ликвидации технологических ограничений использования земельного участка 
+                    (вынос сетей из-под пятна застройки).</li>
+                <li>Проведение работ по установке/замене приборов учета газа.</li>
+                <li>Осуществление ремонтных работ ВДГО, ВКГО по заявке.</li>
+                <li>АДО (обеспечение) газораспределительных систем и сетей газопотребления, ВДГО (ВКГО).</li>
+            </ol>
+      </div>
+
+      <div class="blocks-container">
+        <div class="block">
+          <img src="img\image (19).png" alt="Изображение 1">
+          <a href="teritor.html" class="block-link">Приходите в территориальные<br> 
+            представительства</a>
+        </div>
+        <div class="block">
+          <img src="img\Group 12.png" alt="Изображение 2">
+          <a href="#" class="block-link">Взаимодействуйте через<br> 
+            личный кабинет</a>
+        </div>
+        <div class="block">
+          <img src="img\image (20).png" alt="Изображение 3">
+          <a href="#" class="block-link">Подавайте документы через<br>
+            МФЦ</a>
+        </div>
+      </div>
+
+
+      <footer class="footer">
+        <div class="newsletter">
+          <h3>Подпишитесь на наши новости</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Введите ваш email" required>
+            <button type="submit">Подписаться</button>
+          </form>
+        </div>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Компания</h3>
+            <br>
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">История</a></li>
+              <li><a href="#">Лицензия и свидетельства</a></li>
+              <li><a href="#">Филиалы</a></li>
+              <li><a href="#">Вакансии</a></li>
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">Оставить сообщение</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Каталог</h3>
+            <br>
+            <ul>
+              <li><a href="#">Счетчики газа</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Услуги</h3>
+            <br>
+            <ul>
+              <li><a href="#">Подключение к сетям<br>газоснабжения</a></li>
+              <li><a href="#">Заключение договора<br>поставки газа</a></li>
+              <li><a href="#">Техническое обслуживание<br>газового<br>оборудования</a></li>
+              <li><a href="#">аварийно-диспетчерское<br>обслуживание</a></li>
+              <li><a href="#">Ремонт газового<br>оборудования</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Информация</h3>
+            <br>
+            <ul>
+              <li><a href="#">Раскрытие информации</a></li>
+              <li><a href="#">Закупки</a></li>
+              <li><a href="#">Акционерам</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Наши Контакты</h3>
+            <br>
+            <ul class="social-links">
+              <p>Единный call-центр по<br> 
+                приему ремонтных заявок:</p>
+                <br>
+              <li><a href="#">8-800-3000-104</a></li><br>
+              <li><a href="#">(342) 270-10-04</a></li>
+              <br><br>
+              <p>Приемная:</p>
+              <br>
+              <li><a href="#">+7 (342) 218-11-00</a></li>
+              <br><br>
+              <p><img src="img\Location.png" alt="">614000,г.Пермь. Ул.<br>
+                Уральская, 104</p><br>
+              <p class="linksugaz"><img src="img\Gmail Logo.png" alt=""><a href="e-mail">ugaz@ugaz.ru</a></p>
+
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Газпром. Все права защищены.</p>
+        </div>
+      </footer>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата</title>
+    <link rel="stylesheet" href="Payment.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img\Logo.png" alt="Логотип"></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="company.html">Компания</a></li>
+            <li class="dropdown">
+              <a href="services.html" >Услуги</a>
+             
+            </li>
+            <li><a href="single window.html">Единое окно</a></li>
+            <li class="dropdown">
+              <a href="#" style="color: blue;">Оплата</a>
+              
+            </li>
+            <li><a href="information.html">Информация</a></li>
+            <li><a href="online store.html">Интернет магазин</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <button class="search-btn" onclick="openSearch()">
+            <img src="img\Search.png" alt="Иконка поиска">
+          </button>
+        </div>
+      </header>
+    
+      <div id="search-overlay" class="search-overlay">
+        <button class="close-btn" onclick="closeSearch()">×</button>
+        <form class="search-form">
+          <input type="text" placeholder="Введите запрос..." autofocus>
+          <button type="submit">Поиск</button>
+        </form>
+      </div>
+
+      <ul class="breadcrumb">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#">Оплата</a></li>
+        <li>Оплата по карте</li>
+      </ul>
+
+      <div class="zagolovok_block_company">
+        <h1>Оплата по карте</h1>
+      </div>
+
+      <div class="zagolovok_block_paymant">
+        <h3>Оплата услуг/товаров картой. За газ здесь оплата не принимается.</h3>
+      </div>
+
+      
+
+
+
+
+
+
+
+
+      <table class="striped-table">
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Наименование подразделения</th>
+            <th>Оплата</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Пермский филиал</td>
+            <td><a href="#">Оплатить картой</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Березниковский филиал</td>
+            <td><a href="#">Оплатить картой</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Краснокамский филиал</td>
+            <td><a href="#">Оплатить картой</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Пермский районый филиал</td>
+            <td><a href="#">Оплатить картой</a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Чайковский филиал</td>
+            <td><a href="#">Оплатить картой</a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Чусовской филиал</td>
+            <td><a href="#">Оплатить картой</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+      <footer class="footer">
+        <div class="newsletter">
+          <h3>Подпишитесь на наши новости</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Введите ваш email" required>
+            <button type="submit">Подписаться</button>
+          </form>
+        </div>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Компания</h3>
+            <br>
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">История</a></li>
+              <li><a href="#">Лицензия и свидетельства</a></li>
+              <li><a href="#">Филиалы</a></li>
+              <li><a href="#">Вакансии</a></li>
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">Оставить сообщение</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Каталог</h3>
+            <br>
+            <ul>
+              <li><a href="#">Счетчики газа</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Услуги</h3>
+            <br>
+            <ul>
+              <li><a href="#">Подключение к сетям<br>газоснабжения</a></li>
+              <li><a href="#">Заключение договора<br>поставки газа</a></li>
+              <li><a href="#">Техническое обслуживание<br>газового<br>оборудования</a></li>
+              <li><a href="#">аварийно-диспетчерское<br>обслуживание</a></li>
+              <li><a href="#">Ремонт газового<br>оборудования</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Информация</h3>
+            <br>
+            <ul>
+              <li><a href="#">Раскрытие информации</a></li>
+              <li><a href="#">Закупки</a></li>
+              <li><a href="#">Акционерам</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Наши Контакты</h3>
+            <br>
+            <ul class="social-links">
+              <p>Единный call-центр по<br> 
+                приему ремонтных заявок:</p>
+                <br>
+              <li><a href="#">8-800-3000-104</a></li><br>
+              <li><a href="#">(342) 270-10-04</a></li>
+              <br><br>
+              <p>Приемная:</p>
+              <br>
+              <li><a href="#">+7 (342) 218-11-00</a></li>
+              <br><br>
+              <p><img src="img\Location.png" alt="">614000,г.Пермь. Ул.<br>
+                Уральская, 104</p><br>
+              <p class="linksugaz"><img src="img\Gmail Logo.png" alt=""><a href="e-mail">ugaz@ugaz.ru</a></p>
+
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Газпром. Все права защищены.</p>
+        </div>
+      </footer>
+      
+</body>
+</html>

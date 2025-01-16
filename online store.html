@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет магазин</title>
+    <link rel="stylesheet" href="online store.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img\Logo.png" alt="Логотип"></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="company.html">Компания</a></li>
+            <li class="dropdown">
+              <a href="services.html">Услуги</a>
+             
+            </li>
+            <li><a href="single window.html">Единое окно</a></li>
+            <li class="dropdown">
+              <a href="Payment.html">Оплата</a>
+             
+            </li>
+            <li><a href="information.html">Информация</a></li>
+            <li><a href="#" style="color: blue;">Интернет магазин</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <button class="search-btn" onclick="openSearch()">
+            <img src="img\Search.png" alt="Иконка поиска">
+          </button>
+        </div>
+      </header>
+    
+      <div id="search-overlay" class="search-overlay">
+        <button class="close-btn" onclick="closeSearch()">×</button>
+        <form class="search-form">
+          <input type="text" placeholder="Введите запрос..." autofocus>
+          <button type="submit">Поиск</button>
+        </form>
+      </div>
+
+      <ul class="breadcrumb">
+        <li><a href="index.html">Главная</a></li>
+        <li>Интернет-магазин</li>
+      </ul>
+
+      <div class="zagolovok_block_company">
+        <h1>Интернет-магазин</h1>
+      </div>
+
+      <div class="header-bar">
+        <a href="#about" class="shop-link">О Интернет-магазине</a>
+        <div class="cart">
+          <button class="cart-btn" onclick="addToCart()">
+            <a href="basket.html"><img src="https://cdn-icons-png.flaticon.com/512/711/711897.png" alt="Корзина" class="cart-icon"></a>
+           (<span id="cart-count">0</span>)
+          </button>
+        </div>
+      </div>
+      <hr class="divider" style="width: 95%; margin-left: 4%;">
+
+
+
+
+
+
+
+
+
+
+      <div class="products-container">
+        <div class="product-item">
+          <img src="img\image (39).png" alt="Товар 1">
+          <a href="pumps.html"><p class="product-title">Насосы</p></a>
+        </div>
+        <div class="product-item">
+          <img src="img\image (40).png" alt="Товар 2">
+          <a href="pumps copy.html"><p class="product-title">Котлы</p></a>
+        </div>
+        <div class="product-item">
+          <img src="img\image (41).png" alt="Товар 3">
+          <p class="product-title">Водонагреватели</p>
+        </div>
+        <div class="product-item">
+          <img src="img\image (42).png" alt="Товар 4">
+          <p class="product-title">Приборы 
+            отопления</p>
+        </div>
+        <div class="product-item">
+          <img src="img\image (43).png" alt="Товар 5">
+          <p class="product-title">Коллекторы</p>
+        </div>
+
+        <div class="product-item">
+            <img src="img\image (44).png" alt="Товар 1">
+            <p class="product-title">Водоподготовка</p>
+          </div>
+          <div class="product-item">
+            <img src="img\image (45).png" alt="Товар 2">
+            <p class="product-title">Трубы</p>
+          </div>
+          <div class="product-item">
+            <img src="img\image (46).png" alt="Товар 3">
+            <p class="product-title">Вентиляция и
+              кондиционирование</p>
+          </div>
+          <div class="product-item">
+            <img src="img\image (47).png" alt="Товар 4">
+            <p class="product-title">запорная 
+              арматура</p>
+          </div>
+          <div class="product-item">
+            <img src="img\image (48).png" alt="Товар 5">
+            <p class="product-title">Фитинги</p>
+          </div>
+
+          <div class="product-item">
+            <img src="img\image (49).png" alt="Товар 1">
+            <p class="product-title">Предохранительная 
+              арматура</p>
+          </div>
+          <div class="product-item">
+            <img src="img\image (50).png" alt="Товар 2">
+            <p class="product-title">Регулирующая 
+              арматура</p>
+          </div>
+          <div class="product-item">
+            <img src="img\image (51).png" alt="Товар 3">
+            <p class="product-title">Баки и
+              емкости</p>
+          </div>
+          <div class="product-item">
+            <img src="img\image (52).png" alt="Товар 4">
+            <p class="product-title">Приводы</p>
+          </div>
+          <div class="product-item">
+            <img src="img\image (53).png" alt="Товар 5">
+            <p class="product-title">Устройства сетевой защиты</p>
+          </div>
+      </div>
+      
+      
+</body>
+</html>

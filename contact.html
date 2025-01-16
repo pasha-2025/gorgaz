@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+          <img src="img\Logo.png" alt="Логотип">
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="company.html">Компания</a></li>
+            <li class="dropdown">
+              <a href="services.html">Услуги</a>
+            </li>
+            <li><a href="single window.html">Единое окно</a></li>
+            <li class="dropdown">
+              <a href="Payment.html">Оплата</a>
+            </li>
+            <li><a href="information.html">Информация</a></li>
+            <li><a href="online store.html">Интернет магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <button class="search-btn" onclick="openSearch()">
+            <img src="img\Search.png" alt="Иконка поиска">
+          </button>
+        </div>
+      </header>
+      <div id="search-overlay" class="search-overlay">
+        <button class="close-btn" onclick="closeSearch()">×</button>
+        <form class="search-form" onsubmit="handleSearch(event)">
+          <input id="searchInput" type="text" placeholder="Введите запрос..." autofocus>
+          <button type="submit">Поиск</button>
+        </form>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9ec9c1415ff7e77892d6661290bcffc6a936f83d9c6d59cde1e316399549bac6&amp;source=constructor" width="1790" height="600" frameborder="0" style="margin-top: 7%;margin-left: 4%;"></iframe>
+
+
+      <div class="row-container">
+        <!-- Первая картинка с текстом -->
+        <div class="item">
+          <div class="image">
+            <img src="img\Group 7.png" alt="Картинка 1">
+          </div>
+          <div class="text">
+            <b><p>Центральный офис</p></b>
+            <p>614000,г.Пермь, ул.Уральская,104</p>
+          </div>
+        </div>
+      
+        <!-- Вторая картинка с текстом -->
+        <div class="item">
+          <div class="image">
+            <img src="img\Group 6.png" alt="Картинка 2">
+          </div>
+          <div class="text">
+            <b><p>Единый call-центр по <br>
+                приему ремонтных заявок</p></b>
+                <p>+7 (342) 270-10-04</p>
+          </div>
+        </div>
+      
+        <!-- Третья картинка с текстом -->
+        <div class="item">
+          <div class="image">
+            <img src="img\Group 5.png" alt="Картинка 3">
+          </div>
+          <div class="text">
+            <b><p>E-mail</p></b>
+            <p>ugaz@ugaz.ru</p>
+          </div>
+        </div>
+      
+        <!-- Кнопка -->
+        <div class="button-container">
+          <button class="styled-button">Задать вопрос</button>
+        </div>
+      </div>
+      <hr>
+      <div class="regional-representation">
+        <h2>Региональные представительства</h2>
+        <p>
+          Наша компания имеет широкую сеть региональных представительств и дилеров.<br> 
+          Вы можете обратиться в ближайший к Вам офис для получения дополнительных консультаций.
+        </p>
+      </div>
+
+      <div class="block-container">
+        <div class="info-block">
+          <img src="img\image (55).png" alt="Картинка 1">
+          <div>
+            <h3>Администрация, г. Пермь, ул. Петропавловская, 43</h3>
+            <p>Телефон: +7 (342) 218-11-00<br>
+                Канцелярия: +7 (342) 218-11-42<br>
+                E-mail: ugaz@ugaz.ru</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <img src="img\image (56).png" alt="Картинка 2">
+          <div>
+            <h3>Филиал в г. Березники, г. Березники, ул. Уральских танкистов, 5</h3>
+            <p>Телефон: +7 (3424) 26-70-95<br>
+                Е-mail: fbr022@fbr.ugaz.ru</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <img src="img\image (60).png" alt="Картинка 3">
+          <div>
+            <h3>Филиал в г. Краснокамск, г. Краснокамск, ул. Геофизиков, 5</h3>
+            <p>Телефон: +7 (34273) 4-30-45<br>
+                Е-mail: post@red.ugaz.ru</p>
+          </div>
+        </div>
+        <div class="info-block">
+            <img src="img\image (61).png" alt="Картинка 2">
+            <div>
+              <h3>Филиал в г. Чайковский, г. Чайковский, ул. Промышленная, 9</h3>
+              <p>Телефон: +7 (3424) 26-70-95<br>
+                  Е-mail: fbr022@fbr.ugaz.ru</p>
+            </div>
+          </div>
+          <div class="info-block">
+            <img src="img\image (57).png" alt="Картинка 3">
+            <div>
+              <h3>Филиал в г. Пермь, г. Пермь, ул.Уральская, 104</h3>
+              <p>Телефон: +7 (34273) 4-30-45<br>
+                  Е-mail: post@red.ugaz.ru</p>
+            </div>
+          </div>
+          <div class="info-block">
+            <img src="img\image (61).png" alt="Картинка 2">
+            <div>
+              <h3>Филиал в Пермском районе, г. Пермь, ул. Оверятская, 54</h3>
+              <p>Телефон: +7 (3424) 26-70-95<br>
+                  Е-mail: fbr022@fbr.ugaz.ru</p>
+            </div>
+          </div>
+          <div class="info-block">
+            <img src="img\image (62).png" alt="Картинка 3">
+            <div>
+              <h3>Филиал в г. Чусовой, г. Чусовой, ул. Высотная, 30</h3>
+              <p>Телефон: +7 (34273) 4-30-45<br>
+                  Е-mail: post@red.ugaz.ru</p>
+            </div>
+          </div>
+      </div>
+
+
+      <footer class="footer">
+        <div class="newsletter">
+          <h3>Подпишитесь на наши новости</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Введите ваш email" required>
+            <button type="submit">Подписаться</button>
+          </form>
+        </div>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Компания</h3>
+            <br>
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">История</a></li>
+              <li><a href="#">Лицензия и свидетельства</a></li>
+              <li><a href="#">Филиалы</a></li>
+              <li><a href="#">Вакансии</a></li>
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">Оставить сообщение</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Каталог</h3>
+            <br>
+            <ul>
+              <li><a href="#">Счетчики газа</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Услуги</h3>
+            <br>
+            <ul>
+              <li><a href="#">Подключение к сетям<br>газоснабжения</a></li>
+              <li><a href="#">Заключение договора<br>поставки газа</a></li>
+              <li><a href="#">Техническое обслуживание<br>газового<br>оборудования</a></li>
+              <li><a href="#">аварийно-диспетчерское<br>обслуживание</a></li>
+              <li><a href="#">Ремонт газового<br>оборудования</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Информация</h3>
+            <br>
+            <ul>
+              <li><a href="#">Раскрытие информации</a></li>
+              <li><a href="#">Закупки</a></li>
+              <li><a href="#">Акционерам</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Наши Контакты</h3>
+            <br>
+            <ul class="social-links">
+              <p>Единный call-центр по<br> 
+                приему ремонтных заявок:</p>
+                <br>
+              <li><a href="#">8-800-3000-104</a></li><br>
+              <li><a href="#">(342) 270-10-04</a></li>
+              <br><br>
+              <p>Приемная:</p>
+              <br>
+              <li><a href="#">+7 (342) 218-11-00</a></li>
+              <br><br>
+              <p><img src="img\Location.png" alt="">614000,г.Пермь. Ул.<br>
+                Уральская, 104</p><br>
+              <p class="linksugaz"><img src="img\Gmail Logo.png" alt=""><a href="e-mail">ugaz@ugaz.ru</a></p>
+
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Газпром. Все права защищены.</p>
+        </div>
+      </footer>
+      
+      
+      
+      
+</body>
+</html>
